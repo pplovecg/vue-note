@@ -1,0 +1,14 @@
+/*开发插件的第一步*/
+首先，创建一个组件，用于实现插件的效果
+
+/*注册该插件为第二步*/
+建立index.js文件，引入要注册的插件，并添加install方法，详情可参考vue.js
+
+/*引入该插件为第三步*/
+将vue文件和index.js文件放在plugin文件夹中，并将此文件夹放在src目录下，与compontents目录同级。在main.js文件中引入plugin
+文件夹，并使用它，代码如下：
+import plugin from './plugin'
+ Vue.use(plugin)
+ 
+ /*最后使用插件*/
+ 新建vue文件，在文件中可使用命名好的插件
